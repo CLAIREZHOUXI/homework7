@@ -2,3 +2,10 @@
    In layman’s terms, it is the measure of “push” available to motivate electrons.
 
 2, Resistance is the measure of the degree to which a conductor opposes an electric current through that conductor
+
+3, Short circuit refers closed circuit.
+
+4, An open circuit is one where the continuity has been broken by an interruption in the path for electrons to flow;
+A closed circuit is one that is complete, with good continuity throughout.
+
+5,yes.
