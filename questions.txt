@@ -1,0 +1,4 @@
+1，Voltage is expression of potential energy（electric pressure or electric tension）.
+   In layman’s terms, it is the measure of “push” available to motivate electrons.
+
+2, Resistance is the measure of the degree to which a conductor opposes an electric current through that conductor
