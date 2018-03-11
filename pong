@@ -51,6 +51,8 @@ var keypress = {
 // sounds to play when the game state enters GAME OVER and POINT.  
 function preload() {
   song = loadSound('Comedy effect backwards drip.wav');
+  pointsound = loadSound('Whistle1.wav');
+  gameoversound = loadSound('Fireworks, rocket whistle with explosion.wav');
 }
 
 function setup() {
@@ -171,7 +173,7 @@ function updateState() {
       } else {
         score.player1 = score.player1 + 1;
         GAMESTATE = 'POINT';
-        //PUT SOUND HERE
+        pointsound.play();
         
       }
     }
@@ -247,6 +249,7 @@ function drawStuff() {
     // text GAME OVER and WINNER!
     textAlign(CENTER);
     text('GAMEOVER', width / 2, height / 2);
+    gameoversound.play(); 
 
 
   }
