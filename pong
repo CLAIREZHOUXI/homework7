@@ -170,7 +170,9 @@ function updateState() {
         (ball.y < (paddle2.y + paddle2.length))) {
         ball.xvelocity = -ball.xvelocity;
         song.play();
-      } else {
+      } else if (score.player1 >=2||score.player2 >=2) {
+        GAMESTATE = 'GAMEOVER';
+       } else {
         score.player1 = score.player1 + 1;
         GAMESTATE = 'POINT';
         pointsound.play();
@@ -182,11 +184,12 @@ function updateState() {
         (ball.y < (paddle1.y + paddle1.length))) {
         ball.xvelocity = -ball.xvelocity;
         song.play();
-      } else {
+      } else if (score.player1 >=2||score.player2 >=2) {
+        GAMESTATE = 'GAMEOVER';
+      }else {
         score.player2 = score.player2 + 1;
         GAMESTATE = 'POINT';
-       
-        //PUT SOUND HERE
+        pointsound.play();
       }
     }
   }
@@ -208,12 +211,12 @@ function updateState() {
 // you may also want to change the logic here so the ball does not 
 // appear while you are waiting for the space bar to start the game play 
 function drawStuff() {
-  background(0);
+  background(200);
   // draw paddles
-  fill(255)
+  fill(250)
 
   push();
-  fill(255, 173, 5)
+  fill(160, 200, 105)
   rect(paddle1.x, paddle1.y, paddle1.width,
     paddle1.length);
   rect(paddle2.x, paddle2.y, paddle2.width,
@@ -272,4 +275,4 @@ function initializePositions() {
   paddle1.y = height / 2;
   paddle2.x = borders.rightx;
   paddle2.y = height / 2;
-}
+}  
